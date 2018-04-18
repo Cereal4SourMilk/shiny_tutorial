@@ -1,7 +1,5 @@
 ##01 - Shiny App Basics
-##Here we'll learn how to connect server and ui together with the input and output objects
-#
-## loading code here
+
 ## anything you load here can be seen by both ui and server
 
 library(shiny)

@@ -1,7 +1,5 @@
 ##02 - Reactives
-##Here we'll learn how to connect server and ui together with the input and output objects
 #
-## loading code here
 ## anything you load here can be seen by both ui and server
 
 library(shiny)
@@ -29,7 +27,7 @@ ui <- fluidPage(
       sidebarPanel(
         selectInput("color_opts", "Select Category to Color With",
                     choices = select_color_options),
-        sliderInput("year_filter", "Select Lowest Year", min = min_year,
+        sliderInput("year_filter", "Select Earliest Year", min = min_year,
                     max=max_year, value = min_year)
       ),
       
@@ -45,8 +43,8 @@ ui <- fluidPage(
 server <- function(input, output) {
   
   biopics_filtered <- reactive({
-    ##add code after biopics here
-    biopics 
+    ##add code
+    biopics
   })
    
    output$scatter_plot <- renderPlot({
